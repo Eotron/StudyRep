@@ -37,7 +37,6 @@ public class kata {
                 menor=Float.parseFloat(cadena[i]);
             }
         }
-
         DecimalFormat formato = new DecimalFormat("#");
         return (formato.format(mayor))+" "+formato.format(menor);
     }
