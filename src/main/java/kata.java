@@ -1,6 +1,4 @@
 import java.text.DecimalFormat;
-import java.util.Arrays;
-import java.util.Collections;
 /**
  * In this little assignment you are given a string
  * of space separated numbers,
@@ -11,7 +9,6 @@ import java.util.Collections;
  */
 
 public class kata {
-
     /**
      * Metodo para sacar numeros altos y numeros bajos
      *
