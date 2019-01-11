@@ -1,4 +1,6 @@
 import java.text.DecimalFormat;
+import java.util.Arrays;
+
 /**
  * In this little assignment you are given a string
  * of space separated numbers,
@@ -11,33 +13,31 @@ import java.text.DecimalFormat;
 public final class Kata {
     /**
      * es un constructor vacio.
-     *
      */
     private Kata() {
     }
+
     /**
      * Metodo para sacar numeros altos y numeros bajos.
      *
      * @param numbers . En este parametro se ingresa una cadena
      *                separado por espacios.
-     * @return
-     *          Devuelve el mayor y el menos Highest and lowest.
-     *
+     * @return Devuelve el mayor y el menos Highest and lowest.
      */
 
     public static String highAndLow(final String numbers) {
         String[] cadena = numbers.split(" ");
-        float mayor = Float.parseFloat(cadena[0]);
-        float menor = Float.parseFloat(cadena[0]);
-        for (int i = 1; i <= (cadena.length - 1); ++i) {
-            if (Float.parseFloat(cadena[i]) > mayor) {
-                mayor = Float.parseFloat(cadena[i]);
+        int mayor = 0;
+        int menor = 0;
+        for (String item : cadena) {
+            int aux = Integer.parseInt(item);
+            if (aux > mayor) {
+                mayor = aux;
             }
-            if (Float.parseFloat(cadena[i]) < menor) {
-                menor = Float.parseFloat(cadena[i]);
+            if (aux < menor) {
+                menor = aux;
             }
         }
-        DecimalFormat formato = new DecimalFormat("#");
-        return (formato.format(mayor)) + " " + formato.format(menor);
+        return String.format("%s %s", mayor, menor);
     }
 }
