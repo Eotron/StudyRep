@@ -1,5 +1,4 @@
 import com.sun.deploy.util.StringUtils;
-
 import java.util.Arrays;
 public class Maskify {
     public static String maskify(String str) {
@@ -15,6 +14,7 @@ public class Maskify {
         for (int i = 0; i <str.length() ; i++) {
             UnionCadena=UnionCadena.concat(cadena[i]);
         }
-    return UnionCadena;
+        System.out.println(UnionCadena.substring(2)+" prueba");
+        return UnionCadena;
     }
 }
